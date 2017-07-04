@@ -1,0 +1,7 @@
+# ignore .pyc files
+*.pyc
+
+.DS_Store
+
+# ignore directories
+.idea/
