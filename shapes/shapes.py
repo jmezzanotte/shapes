@@ -99,13 +99,27 @@ class Triangle(object):
     def tangent(self):
         return self.opposite / self.adjacent
 
+    @property
+    def perimeter(self):
+        return self.hypotenuse + self.adjacent + self.opposite
+
+    @property
+    def area(self):
+        return (self.base * self.opposite) * 0.5
+
+    @property
+    def base(self):
+        return self.adjacent
+
+
 if __name__ == "__main__":
 
     # Quick unit tests of the module.
-    t = Triangle(hypotenuse=5, adjacent=4, opposite=3)
+    t = Triangle(hypotenuse=55, adjacent=24, opposite=32)
     print t.is_equilateral()
     print t.is_isosceles()
     print t.is_scalene()
     print t.hypotenuse
     print t.sine
+    print t.area
     print "This triangle is has a right angle:{0}".format(t.is_right())

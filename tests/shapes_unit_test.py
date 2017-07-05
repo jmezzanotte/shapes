@@ -39,6 +39,12 @@ class EquilateralTriangleTestCase(unittest.TestCase):
         """
         self.assertFalse(self.test_triange.is_isosceles())
 
+    def test_perimeter(self):
+        """
+        Tests whether or not our perimeter property is functioning correctly.
+        :return: 
+        """
+        self.assertEqual(self.test_triange.perimeter, 9)
 
 if __name__ == "__main__":
     unittest.main()
